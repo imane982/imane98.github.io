@@ -1,0 +1,104 @@
+index.html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi página web con imágenes</title>
+    <style>
+        /* Estilos CSS */
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #f0f0f0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .gallery img {
+            max-width: 300px;
+            height: auto;
+            border-radius: 10px; /
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+            cursor: pointer; /
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bienvenido a mi página</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Acerca de</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Imágenes destacadas</h2>
+            <div class="gallery">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/La_Isla_de_Tenerife%2C_España.JPG/1280px-La_Isla_de_Tenerife%2C_España.JPG" alt="Paisaje de Tenerife">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Lago_Nahuel_Huapi_y_Cerro_Tronador.jpg/1280px-Lago_Nahuel_Huapi_y_Cerro_Tronador.jpg" alt="Paisaje de la Patagonia">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Playa_de_las_Teresitas%2C_Tenerife.jpg/1280px-Playa_de_las_Teresitas%2C_Tenerife.jpg" alt="Playa de las Teresitas">
+            </div>
+        </section>
+
+        <section>
+            <h2>Hola que tal</h2>
+            <p>Hola que tal estas, espero que todo bien. Bienvenido</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Derechos reservados &copy; 2024</p>
+    </footer>
+
+    <script>
+        // Código JavaScript
+        const images = document.querySelectorAll('.gallery img');
+
+        images.forEach(image => {
+            image.addEventListener('click', () => {
+                // Al hacer clic en una imagen, se muestra una alerta con su descripción
+                alert(image.alt);
+            });
+        });
+    </script>
+</body>
+</html>
